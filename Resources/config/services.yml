@@ -1,0 +1,15 @@
+services:
+    wh_recaptcha.validator:
+        class: WH\RecaptchaBundle\Services\RecaptchaValidator
+        autowire: true
+    wh_recaptcha.register_parameter.twig_extension:
+        class: WH\RecaptchaBundle\Twig\RegisterParameterExtension
+        autowire: true
+        public: false
+        tags:
+            - { name: twig.extension }
+    wh_recaptcha.event_listener:
+        class: WH\RecaptchaBundle\EventListener\RecaptchaListener
+        autowire: true
+        tags:
+            - { name: kernel.event_listener, event: kernel.request}
