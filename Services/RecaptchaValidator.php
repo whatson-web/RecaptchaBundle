@@ -42,9 +42,6 @@ class RecaptchaValidator
         $response = curl_exec($ch);
         $response = json_decode($response, true);
 
-        dump($gRecaptchaResponse);
-        dump($response);
-
         if (isset($response['success']) && $response['success'] == true) {
             return true;
         }
