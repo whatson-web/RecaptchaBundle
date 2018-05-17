@@ -8,8 +8,7 @@ services:
         public: false
         tags:
             - { name: twig.extension }
-    wh_recaptcha.event_listener:
-        class: WH\RecaptchaBundle\EventListener\RecaptchaListener
-        autowire: true
-        tags:
-            - { name: kernel.event_listener, event: kernel.request}
+    wh_recaptcha.form.recaptcha:
+        class: WH\RecaptchaBundle\Form\RecaptchaType
+        arguments: ['@service_container']
+        tags: [form.type]
