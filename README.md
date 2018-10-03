@@ -5,6 +5,16 @@ Insérez la librairie Google avec la balise </head> :
     
     <script src='https://www.google.com/recaptcha/api.js'></script>
     
+##Config
+
+```
+wh_recaptcha:
+    public_key: ''
+    private_key: ''
+```
+
+
+    
 # Mise en place sur un formulaire
 ## FormType
 Ajouter un champ dans le formulaire, ex :

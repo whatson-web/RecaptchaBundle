@@ -11,4 +11,5 @@ services:
     wh_recaptcha.form.recaptcha:
         class: WH\RecaptchaBundle\Form\RecaptchaType
         arguments: ['@service_container']
-        tags: [form.type]
+        tags:
+          - { name: form.type }
